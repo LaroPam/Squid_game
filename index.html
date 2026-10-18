@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Игра в кальмара · 456</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><a class="brand" href="./" aria-label="Главная">○ △ □ <span>ИГРА В КАЛЬМАРА</span></a><span class="edition">ИСПЫТАНИЕ 01 / 2D</span><button id="sound" class="icon" aria-label="Включить звук">ЗВУК ВЫКЛ.</button></header>
+<main>
+<section class="intro"><div class="eyebrow"><span></span> ВЫ ПРИГЛАШЕНЫ</div><h1>Тише едешь.<br><em>Дальше будешь.</em></h1><p>Пересеките поле, пока кукла не смотрит.<br>Остановитесь на красный. Второго шанса не будет.</p></section>
+<section class="game-shell" aria-label="Игровое поле">
+<div class="dashboard"><div><span class="label">ИГРОК</span><strong>№ 456 <i class="live-dot"></i></strong></div><div class="signal"><span id="lamp"></span><strong id="signalText">ОЖИДАНИЕ</strong></div><div class="timer"><span class="label">ОСТАЛОСЬ</span><strong id="time">01:00</strong></div></div>
+<div class="stage"><canvas id="game" width="1000" height="600" aria-label="Поле игры: игрок движется снизу к финишу" role="img"></canvas><div class="vignette"></div><div id="overlay" class="overlay"><div class="ticket">○ △ □</div><span id="overlayLabel" class="eyebrow">ПРАВИЛА ПРОСТЫ</span><h2 id="overlayTitle">Один шаг к победе.</h2><p id="overlayBody">Зажмите пробел или кнопку «Идти».<br>Отпустите, когда свет станет красным.</p><button id="start" class="primary">НАЧАТЬ ИГРУ <span>↗</span></button><small id="best"></small></div><div id="toast" class="toast" aria-live="polite"></div></div>
+<div class="game-bottom"><span><b id="progress">0</b>% ДОЙДЕНО</span><div class="track"><div id="progressBar"></div></div><span>ФИНИШ ↑</span></div>
+</section>
+<section class="controls"><div class="keys"><kbd>ПРОБЕЛ</kbd><span>или <kbd>↑</kbd> — удерживайте, чтобы идти</span></div><button id="move" class="move" disabled>↑ &nbsp; ИДТИ <span>УДЕРЖИВАТЬ</span></button><button id="restart" class="restart">↻ &nbsp; ЗАНОВО</button></section>
+<footer><span>01 <b>КРАСНЫЙ СВЕТ — ЗЕЛЁНЫЙ СВЕТ</b></span><span>Вдохновлено сериалом · Неофициальная фан-игра</span></footer>
+</main><script src="game.js"></script>
+</body></html>
